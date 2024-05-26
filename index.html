@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="search">
+                <div style="display: flex; gap: 5px;">
+                    <img style="filter: invert(1);" src="./static/search-01.svg">
+                    <h2>Search for location :</h2>
+                </div>
+                <div>
+                    <label for="states">States : </label>
+                    <select id="states">
+                    </select>
+                </div>
+                <div>
+                    <label for="cities">Cities : </label>
+                    <select id="cities">
+                    </select>
+                </div>
+            </div>
+
+            <div class="currentWeather">
+                <div class="heading">
+                    <h3>Current Weather</h3>
+                    <p id="time"></p>
+                </div>
+                <div class="temp">
+                    <div class="img">
+                    </div>
+                    <div class="temperature">
+                        <p id="degree"></p>
+                        <p id="forecast"></p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-div" id="wind-speed">
+                        <img src="./static/fast-wind.svg">
+                        <p></p>
+                    </div>
+                    <div class="info-div" id="humidity">
+                        <img src="./static/droplet.svg">
+                        <p></p>
+                    </div>
+                    <div class="info-div" id="sunrise">
+                        <img src="./static/sunrise.svg">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="weatherChart">
+                <select id="dates">
+                </select>
+                <canvas id="myChart" style="max-height: 220px; max-width: 500px;"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
